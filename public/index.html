@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusConnect — Student Placement Portal</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+:root{--navy:#15233d;--blue:#4568f5;--pale:#f4f7fc;--ink:#1c2940;--muted:#738098;--line:#e8edf5;--green:#14966b}
+*{box-sizing:border-box}body{margin:0;background:var(--pale);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}
+a{text-decoration:none}.app-shell{min-height:100vh}.sidebar{width:245px;background:#fff;border-right:1px solid var(--line);position:fixed;inset:0 auto 0 0;padding:25px 17px;z-index:100;display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:11px;font-size:19px;font-weight:800;color:var(--navy);padding:0 9px 32px}.brand-mark{width:37px;height:37px;border-radius:12px;background:linear-gradient(135deg,#4b6bff,#7d8fff);display:grid;place-items:center;color:#fff;font-size:19px}.nav-label{font-size:10px;letter-spacing:1.4px;font-weight:800;color:#9aa5b7;padding:0 12px;margin:15px 0 9px}.side-link{display:flex;align-items:center;gap:13px;color:#758198;padding:12px 13px;border-radius:11px;margin:2px 0;font-weight:600;transition:.15s}.side-link i{font-size:17px}.side-link:hover,.side-link.active{background:#eef2ff;color:var(--blue)}.side-link .count{margin-left:auto;font-size:11px;background:#f0f3f8;padding:3px 7px;border-radius:7px}.sidebar-bottom{margin-top:auto;background:#f5f7ff;border-radius:15px;padding:15px}.main{margin-left:245px;min-height:100vh}.topbar{height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 34px;position:sticky;top:0;z-index:50}.searchbox{width:min(390px,42vw);position:relative}.searchbox i{position:absolute;left:14px;top:11px;color:#98a3b7}.searchbox input{padding-left:39px;background:#f7f9fc;border:1px solid #edf0f6;border-radius:10px;height:40px;font-size:13px}.top-actions{display:flex;align-items:center;gap:18px}.icon-btn{width:38px;height:38px;border:1px solid var(--line);background:#fff;border-radius:11px;color:#65728a;display:grid;place-items:center}.avatar{width:39px;height:39px;border-radius:50%;background:#e1e8ff;color:#4058c7;font-weight:800;display:grid;place-items:center}.content{padding:30px 34px 45px;max-width:1500px;margin:auto}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--blue);font-weight:800}.page-title{font-size:27px;font-weight:800;letter-spacing:-.7px;margin:4px 0 6px}.subtle{color:var(--muted)}.welcome-banner{border-radius:19px;padding:26px 29px;color:white;background:linear-gradient(110deg,#243c79,#4568f5 67%,#7890ff);position:relative;overflow:hidden;min-height:180px}.welcome-banner:after{content:"";position:absolute;width:220px;height:220px;border:32px solid #ffffff17;border-radius:50%;right:5%;top:-74px}.welcome-banner:before{content:"";position:absolute;width:125px;height:125px;border:22px solid #ffffff15;border-radius:50%;right:22%;bottom:-85px}.welcome-banner h2{font-size:23px;font-weight:800;margin:8px 0}.welcome-banner p{color:#e1e7ff;max-width:540px;margin-bottom:18px}.btn-white{background:#fff;color:#3152d7;font-weight:700;border:0;padding:10px 15px;border-radius:9px}.btn-primary{background:var(--blue);border-color:var(--blue)}.btn-primary:hover{background:#3555e5;border-color:#3555e5}.stat-card,.panel,.job-card{background:#fff;border:1px solid var(--line);border-radius:15px}.stat-card{padding:19px;display:flex;align-items:center;gap:14px;height:100%}.stat-icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;font-size:20px}.stat-value{font-size:25px;font-weight:800;line-height:1.2}.stat-label{color:var(--muted);font-size:12px;margin-top:4px}.panel{padding:21px}.panel-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:17px}.panel-heading h5{font-size:15px;font-weight:800;margin:0}.job-card{padding:19px;transition:transform .16s,box-shadow .16s;height:100%}.job-card:hover{transform:translateY(-2px);box-shadow:0 12px 30px #253c6910}.company-logo{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-weight:900;font-size:15px;flex-shrink:0}.job-title{font-size:15px;font-weight:800;margin:0 0 4px}.company-name{font-size:12px;color:var(--muted)}.tag{display:inline-flex;align-items:center;padding:5px 8px;border-radius:7px;background:#f1f4fa;color:#69768e;font-size:11px;font-weight:700;margin:3px 3px 0 0}.job-meta{display:flex;gap:13px;flex-wrap:wrap;color:#7b879b;font-size:11px;margin:14px 0}.job-meta i{margin-right:4px}.salary{font-weight:800;font-size:13px;color:#1d8b67}.filter-select,.form-control,.form-select{font-size:13px;border-color:#e3e8f1;border-radius:9px;padding:10px 12px}.form-control:focus,.form-select:focus{border-color:#8fa2ff;box-shadow:0 0 0 .2rem #4568f51a}.section{display:none}.section.active{display:block}.status{font-size:11px;font-weight:800;padding:6px 9px;border-radius:8px;display:inline-block}.status-pending{color:#9a6a0c;background:#fff5d9}.status-shortlisted{color:#16794f;background:#dff8ed}.status-rejected{color:#b63e4a;background:#ffe9ec}.status-applied{color:#3458d4;background:#e9eeff}.progress{height:7px;background:#edf1f7;border-radius:10px}.progress-bar{background:var(--blue);border-radius:10px}.table>:not(caption)>*>*{padding:14px 12px;border-bottom-color:#edf0f5;vertical-align:middle}.table thead th{font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#97a1b2;font-weight:800;background:#fafbfd}.empty-state{text-align:center;padding:45px 20px;color:#8591a5}.empty-state i{font-size:32px;display:block;margin-bottom:10px;color:#b3bfd2}.mobile-menu{display:none}.toast-container{z-index:2000}.profile-avatar{width:74px;height:74px;border-radius:22px;background:#e5eaff;color:#435dd6;display:grid;place-items:center;font-size:28px;font-weight:800}.skill-chip{background:#eff2ff;color:#435dd6;padding:7px 10px;border-radius:8px;font-size:12px;font-weight:700;display:inline-block;margin:3px}.modal-content{border:0;border-radius:17px;overflow:hidden}.modal-header{border-bottom:1px solid var(--line);padding:20px 22px}.modal-body{padding:22px}.modal-footer{border-top:1px solid var(--line);padding:15px 22px}
+@media(max-width:1000px){.sidebar{width:215px}.main{margin-left:215px}.content{padding:24px}.topbar{padding:0 24px}}
+@media(max-width:760px){.sidebar{transform:translateX(-100%);transition:transform .2s;box-shadow:12px 0 35px #15233d18}.sidebar.open{transform:translateX(0)}.main{margin-left:0}.topbar{height:66px;padding:0 16px}.mobile-menu{display:grid}.searchbox{width:min(300px,45vw)}.top-actions{gap:8px}.content{padding:20px 15px 35px}.page-title{font-size:23px}.welcome-banner{padding:22px}.welcome-banner h2{font-size:20px}.hide-mobile{display:none!important}.stat-card{padding:14px}.stat-value{font-size:22px}.panel{padding:16px}.table-responsive{font-size:12px}}
+</style>
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><span class="brand-mark"><i class="bi bi-mortarboard-fill"></i></span> CampusConnect</div>
+  <div class="nav-label">WORKSPACE</div>
+  <a href="#" class="side-link active" data-section="overview"><i class="bi bi-grid-1x2"></i> Overview</a>
+  <a href="#" class="side-link" data-section="jobs"><i class="bi bi-briefcase"></i> Find Jobs <span class="count" id="navJobCount">8</span></a>
+  <a href="#" class="side-link" data-section="applications"><i class="bi bi-file-earmark-check"></i> My Applications</a>
+  <a href="#" class="side-link" data-section="profile"><i class="bi bi-person-vcard"></i> My Profile</a>
+  <div class="nav-label">MANAGEMENT</div>
+  <a href="#" class="side-link" data-section="admin"><i class="bi bi-sliders"></i> Placement Admin</a>
+  <div class="sidebar-bottom">
+    <div class="d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars text-primary fs-5"></i><strong style="font-size:12px">Career tip</strong></div>
+    <p class="subtle mb-2" style="font-size:11px;line-height:1.6">Keep your profile and skills updated to stand out to recruiters.</p>
+    <a href="#" class="small fw-bold" data-goto="profile">Complete your profile <i class="bi bi-arrow-right"></i></a>
+  </div>
+  <div class="d-flex align-items-center gap-2 mt-4 px-2">
+    <div class="avatar" id="sideAvatar">AS</div><div class="overflow-hidden"><div class="fw-bold text-truncate" id="sideName" style="font-size:12px">Aarav Sharma</div><div class="subtle" style="font-size:10px">Student account · Demo</div></div>
+  </div>
+</aside>
+<main class="main">
+<header class="topbar">
+  <div class="d-flex align-items-center gap-3 flex-grow-1">
+    <button class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu"><i class="bi bi-list"></i></button>
+    <div class="searchbox"><i class="bi bi-search"></i><input id="globalSearch" class="form-control" placeholder="Search jobs, companies, skills..." aria-label="Search jobs"></div>
+  </div>
+  <div class="top-actions">
+    <button class="icon-btn position-relative" id="notificationBtn" title="Notifications"><i class="bi bi-bell"></i><span class="position-absolute top-0 end-0 translate-middle p-1 bg-danger border border-white rounded-circle"></span></button>
+    <div class="avatar" id="topAvatar">AS</div>
+    <button class="btn btn-light btn-sm border hide-mobile" id="accountBtn"><i class="bi bi-person-check me-1"></i> Demo account</button>
+  </div>
+</header>
+<div class="content">
+<section class="section active" id="section-overview">
+  <div class="d-flex justify-content-between align-items-start gap-3 flex-wrap mb-4">
+    <div><div class="eyebrow">Student workspace</div><h1 class="page-title">Good morning, <span id="welcomeName">Aarav</span> 👋</h1><p class="subtle mb-0">Here's what's happening with your placement journey today.</p></div>
+    <button class="btn btn-primary px-3 py-2" data-goto="jobs"><i class="bi bi-search me-2"></i>Explore opportunities</button>
+  </div>
+  <div class="welcome-banner mb-4">
+    <div class="eyebrow" style="color:#d4dcff">YOUR NEXT CHAPTER STARTS HERE</div>
+    <h2>Find a role that fits your ambition.</h2>
+    <p>Explore opportunities from leading companies, track your applications, and take the next step in your career.</p>
+    <button class="btn-white" data-goto="jobs">Browse open positions <i class="bi bi-arrow-up-right ms-2"></i></button>
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-6 col-xl-3"><div class="stat-card"><div class="stat-icon" style="background:#e9eeff;color:#4568f5"><i class="bi bi-briefcase"></i></div><div><div class="stat-value" id="statJobs">8</div><div class="stat-label">Open opportunities</div></div></div></div>
+    <div class="col-6 col-xl-3"><div class="stat-card"><div class="stat-icon" style="background:#e0f8ef;color:#14966b"><i class="bi bi-send"></i></div><div><div class="stat-value" id="statApplied">2</div><div class="stat-label">Applications submitted</div></div></div></div>
+    <div class="col-6 col-xl-3"><div class="stat-card"><div class="stat-icon" style="background:#fff2dc;color:#cb8a1c"><i class="bi bi-bookmark-star"></i></div><div><div class="stat-value" id="statShortlist">1</div><div class="stat-label">Shortlisted</div></div></div></div>
+    <div class="col-6 col-xl-3"><div class="stat-card"><div class="stat-icon" style="background:#f1e8ff;color:#8953cb"><i class="bi bi-person-check"></i></div><div><div class="stat-value" id="statProfile">75%</div><div class="stat-label">Profile completion</div></div></div></div>
+  </div>
+  <div class="row g-4">
+    <div class="col-xl-8"><div class="panel h-100"><div class="panel-heading"><div><h5>Recommended for you</h5><div class="subtle mt-1" style="font-size:12px">Roles that match popular student skills</div></div><a href="#" class="small fw-bold" data-goto="jobs">View all <i class="bi bi-arrow-right"></i></a></div><div class="row g-3" id="recommendedJobs"></div></div></div>
+    <div class="col-xl-4"><div class="panel mb-4"><div class="panel-heading"><h5>Profile strength</h5><span class="fw-bold text-primary" id="profilePercent">75%</span></div><div class="progress mb-3"><div class="progress-bar" id="profileProgress" style="width:75%"></div></div><div class="subtle mb-3" style="font-size:12px">A complete profile helps recruiters understand your strengths.</div><div id="profileChecklist"></div><button class="btn btn-outline-primary btn-sm w-100 mt-3" data-goto="profile">Update profile</button></div>
+    <div class="panel"><div class="panel-heading"><h5>Recent activity</h5><a href="#" data-goto="applications" class="small fw-bold">View all</a></div><div id="recentActivity"></div></div></div>
+  </div>
+</section>
+<section class="section" id="section-jobs">
+  <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4"><div><div class="eyebrow">Career opportunities</div><h1 class="page-title">Find your next opportunity</h1><p class="subtle mb-0">Explore internships and entry-level roles from top employers.</p></div><span class="tag align-self-center" id="jobsResultCount">8 opportunities</span></div>
+  <div class="panel mb-4"><div class="row g-3 align-items-end">
+    <div class="col-md-4"><label class="form-label fw-semibold">Search keyword</label><input id="jobSearch" class="form-control" placeholder="Role, company, or skill"></div>
+    <div class="col-md-2"><label class="form-label fw-semibold">Job type</label><select id="typeFilter" class="form-select"><option value="">All types</option><option>Full-time</option><option>Internship</option><option>Part-time</option></select></div>
+    <div class="col-md-2"><label class="form-label fw-semibold">Location</label><select id="locationFilter" class="form-select"><option value="">All locations</option><option>Remote</option><option>Bengaluru</option><option>Gurugram</option><option>Hyderabad</option><option>Pune</option><option>Chandigarh</option><option>Delhi</option></select></div>
+    <div class="col-md-2"><label class="form-label fw-semibold">Minimum CGPA</label><select id="cgpaFilter" class="form-select"><option value="0">Any CGPA</option><option value="6">6.0+</option><option value="7">7.0+</option><option value="8">8.0+</option></select></div>
+    <div class="col-md-2"><button class="btn btn-outline-secondary w-100" id="resetFilters"><i class="bi bi-arrow-counterclockwise me-1"></i>Reset</button></div>
+  </div></div>
+  <div class="row g-3" id="allJobs"></div>
+</section>
+<section class="section" id="section-applications">
+  <div class="mb-4"><div class="eyebrow">Your job search</div><h1 class="page-title">My Applications</h1><p class="subtle mb-0">Keep track of every opportunity you've applied for.</p></div>
+  <div class="row g-3 mb-4" id="applicationStats"></div>
+  <div class="panel"><div class="panel-heading flex-wrap"><h5>Application history</h5><select class="form-select" style="width:170px" id="statusFilter"><option value="">All statuses</option><option>Applied</option><option>Pending</option><option>Shortlisted</option><option>Rejected</option></select></div><div class="table-responsive"><table class="table mb-0"><thead><tr><th>POSITION</th><th>DATE APPLIED</th><th>TYPE</th><th>STATUS</th><th></th></tr></thead><tbody id="applicationsTable"></tbody></table></div><div id="emptyApplications" class="empty-state d-none"><i class="bi bi-file-earmark-plus"></i><strong>No applications yet</strong><p class="mb-3">Start exploring jobs and apply to opportunities that match your goals.</p><button class="btn btn-primary btn-sm" data-goto="jobs">Explore jobs</button></div></div>
+</section>
+<section class="section" id="section-profile">
+  <div class="mb-4"><div class="eyebrow">Your professional identity</div><h1 class="page-title">My Profile</h1><p class="subtle mb-0">Keep your information current so recruiters can discover you.</p></div>
+  <div class="row g-4"><div class="col-lg-4"><div class="panel text-center"><div class="profile-avatar mx-auto mb-3" id="profileAvatar">AS</div><h5 class="fw-bold mb-1" id="profileCardName">Aarav Sharma</h5><div class="subtle mb-3" id="profileCardCourse">B.Tech · Computer Science</div><span class="tag">Student profile</span><hr><div class="d-flex justify-content-between mb-2"><span class="subtle">Profile completion</span><strong id="profileCardPercent">75%</strong></div><div class="progress"><div class="progress-bar" id="profileCardProgress" style="width:75%"></div></div><p class="subtle mt-3 mb-0" style="font-size:12px">Your profile is stored in this browser for demo purposes.</p></div></div>
+  <div class="col-lg-8"><div class="panel"><div class="panel-heading"><h5>Personal & academic details</h5><span class="tag">Editable</span></div><form id="profileForm" class="row g-3">
+    <div class="col-md-6"><label class="form-label fw-semibold">Full name *</label><input class="form-control" id="pName" required></div>
+    <div class="col-md-6"><label class="form-label fw-semibold">Email address *</label><input type="email" class="form-control" id="pEmail" required></div>
+    <div class="col-md-6"><label class="form-label fw-semibold">Degree / course</label><input class="form-control" id="pCourse" placeholder="B.Tech Computer Science"></div>
+    <div class="col-md-6"><label class="form-label fw-semibold">College / university</label><input class="form-control" id="pCollege" placeholder="Your college name"></div>
+    <div class="col-md-4"><label class="form-label fw-semibold">Graduation year</label><select class="form-select" id="pYear"><option>2026</option><option selected>2027</option><option>2028</option><option>2029</option></select></div>
+    <div class="col-md-4"><label class="form-label fw-semibold">Current CGPA</label><input type="number" min="0" max="10" step=".1" class="form-control" id="pCgpa" placeholder="e.g. 8.2"></div>
+    <div class="col-md-4"><label class="form-label fw-semibold">Preferred location</label><select class="form-select" id="pLocation"><option>Any location</option><option>Remote</option><option>Chandigarh</option><option>Delhi</option><option>Bengaluru</option><option>Pune</option></select></div>
+    <div class="col-12"><label class="form-label fw-semibold">Skills (comma-separated)</label><input class="form-control" id="pSkills" placeholder="JavaScript, React, Python, SQL"></div>
+    <div class="col-12"><label class="form-label fw-semibold">About you</label><textarea class="form-control" rows="3" id="pAbout" placeholder="Write a short professional summary..."></textarea></div>
+    <div class="col-12 d-flex justify-content-end"><button class="btn btn-primary px-4" type="submit"><i class="bi bi-check2 me-2"></i>Save profile</button></div>
+  </form></div></div></div>
+</section>
+<section class="section" id="section-admin">
+  <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4"><div><div class="eyebrow">Management workspace</div><h1 class="page-title">Placement Admin</h1><p class="subtle mb-0">Manage demo opportunities and review student applications.</p></div><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addJobModal"><i class="bi bi-plus-lg me-2"></i>Add a job</button></div>
+  <div class="alert alert-warning py-2" style="font-size:12px"><i class="bi bi-info-circle me-2"></i>Demo admin panel: changes are saved only in this browser. This is not a secure production admin system.</div>
+  <div class="row g-3 mb-4" id="adminStats"></div>
+  <div class="panel mb-4"><div class="panel-heading"><h5>Manage job listings</h5><span class="tag" id="adminJobCount">8 jobs</span></div><div class="table-responsive"><table class="table mb-0"><thead><tr><th>JOB / COMPANY</th><th>TYPE</th><th>LOCATION</th><th>PACKAGE</th><th></th></tr></thead><tbody id="adminJobsTable"></tbody></table></div></div>
+  <div class="panel"><div class="panel-heading"><h5>Student applications</h5></div><div class="table-responsive"><table class="table mb-0"><thead><tr><th>STUDENT</th><th>POSITION</th><th>APPLIED ON</th><th>STATUS</th><th>UPDATE STATUS</th></tr></thead><tbody id="adminApplicationsTable"></tbody></table></div><div id="adminEmptyApps" class="subtle small d-none">No student applications yet.</div></div>
+</section>
+<footer class="text-center subtle mt-5" style="font-size:11px">CampusConnect Student Placement Portal · Full-stack minor project · API-backed when server is running</footer>
+</div>
+</main>
+</div>
+
+<!-- Job details modal -->
+<div class="modal fade" id="jobModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><div><div class="eyebrow mb-1">Opportunity details</div><h5 class="modal-title fw-bold" id="modalJobTitle">Job title</h5></div><button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body" id="jobModalBody"></div><div class="modal-footer"><button class="btn btn-light border" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" id="modalApplyBtn">Apply now</button></div></div></div></div>
+<!-- Apply modal -->
+<div class="modal fade" id="applyModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><div><div class="eyebrow">Application form</div><h5 class="modal-title fw-bold">Apply for this role</h5></div><button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><form id="applyForm"><input type="hidden" id="applyJobId"><div class="mb-3"><label class="form-label fw-semibold">Full name *</label><input class="form-control" id="applyName" required></div><div class="mb-3"><label class="form-label fw-semibold">Email *</label><input class="form-control" id="applyEmail" type="email" required></div><div class="mb-3"><label class="form-label fw-semibold">Current CGPA *</label><input class="form-control" id="applyCgpa" type="number" min="0" max="10" step=".1" required></div><div class="mb-3"><label class="form-label fw-semibold">Why are you a good fit?</label><textarea class="form-control" id="applyNote" rows="3" placeholder="Briefly describe your interest and relevant skills"></textarea></div><div class="alert alert-light border small mb-0">This demo stores your application in this browser. No real employer will receive it.</div></form></div><div class="modal-footer"><button class="btn btn-light border" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" form="applyForm" type="submit">Submit application</button></div></div></div></div>
+<!-- Add job modal -->
+<div class="modal fade" id="addJobModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title fw-bold">Add new opportunity</h5><button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><form id="addJobForm" class="row g-3"><div class="col-12"><label class="form-label fw-semibold">Job title *</label><input class="form-control" id="newTitle" required></div><div class="col-md-6"><label class="form-label fw-semibold">Company *</label><input class="form-control" id="newCompany" required></div><div class="col-md-6"><label class="form-label fw-semibold">Job type</label><select class="form-select" id="newType"><option>Full-time</option><option>Internship</option><option>Part-time</option></select></div><div class="col-md-6"><label class="form-label fw-semibold">Location</label><input class="form-control" id="newLocation" value="Remote"></div><div class="col-md-6"><label class="form-label fw-semibold">Package / stipend</label><input class="form-control" id="newSalary" placeholder="e.g. 6–8 LPA"></div><div class="col-md-6"><label class="form-label fw-semibold">Minimum CGPA</label><input class="form-control" id="newCgpa" type="number" min="0" max="10" step=".1" value="6"></div><div class="col-md-6"><label class="form-label fw-semibold">Deadline</label><input class="form-control" id="newDeadline" type="date"></div><div class="col-12"><label class="form-label fw-semibold">Skills (comma-separated)</label><input class="form-control" id="newSkills" placeholder="JavaScript, Communication"></div><div class="col-12"><label class="form-label fw-semibold">Description</label><textarea class="form-control" id="newDescription" rows="3"></textarea></div></form></div><div class="modal-footer"><button class="btn btn-light border" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" form="addJobForm" type="submit">Create listing</button></div></div></div></div>
+<div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="appToast" class="toast align-items-center text-bg-dark border-0" role="status"><div class="d-flex"><div class="toast-body" id="toastMessage">Saved</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const seedJobs = [
+{id:1,title:"Frontend Developer Intern",company:"PixelForge",initials:"PF",color:"#e9edff",ink:"#4c61d8",type:"Internship",location:"Remote",salary:"₹18k–25k/mo",cgpa:6.5,deadline:"2026-11-15",skills:["HTML","CSS","JavaScript","React"],description:"Work with our product team to build accessible, responsive user interfaces. You'll collaborate with designers and engineers on real product features.",posted:"2 days ago"},
+{id:2,title:"Graduate Software Engineer",company:"TechNova",initials:"TN",color:"#e1f7ef",ink:"#16815d",type:"Full-time",location:"Bengaluru",salary:"₹8–12 LPA",cgpa:7,deadline:"2026-11-22",skills:["Java","DSA","SQL","Git"],description:"Join our engineering team to develop scalable software, solve technical problems, and participate in mentorship and structured onboarding.",posted:"1 day ago"},
+{id:3,title:"Data Analyst Intern",company:"InsightWorks",initials:"IW",color:"#fff0dc",ink:"#bb741c",type:"Internship",location:"Gurugram",salary:"₹20k/mo",cgpa:6,deadline:"2026-11-08",skills:["Python","SQL","Excel","Power BI"],description:"Help turn raw data into meaningful insights. Build reports, validate datasets, and communicate findings to business stakeholders.",posted:"3 days ago"},
+{id:4,title:"UI/UX Design Intern",company:"Northstar Labs",initials:"NL",color:"#f2e7ff",ink:"#8c52c8",type:"Internship",location:"Remote",salary:"₹15k–20k/mo",cgpa:6,deadline:"2026-11-18",skills:["Figma","Wireframing","Prototyping"],description:"Support user research and design polished experiences for web and mobile products. A portfolio or class project is welcome.",posted:"4 days ago"},
+{id:5,title:"Backend Developer",company:"CloudSprint",initials:"CS",color:"#e2f1ff",ink:"#2876b7",type:"Full-time",location:"Hyderabad",salary:"₹7–10 LPA",cgpa:7.5,deadline:"2026-11-28",skills:["Node.js","Express","MongoDB","REST APIs"],description:"Build and maintain backend services and APIs. Work with a cross-functional team on reliability, testing, and database design.",posted:"5 days ago"},
+{id:6,title:"Business Development Trainee",company:"Elevate Partners",initials:"EP",color:"#ffe8ec",ink:"#c24e69",type:"Full-time",location:"Chandigarh",salary:"₹4–6 LPA",cgpa:6,deadline:"2026-11-30",skills:["Communication","Research","Excel"],description:"Learn customer discovery, market research, and relationship management while supporting the business growth team.",posted:"1 week ago"},
+{id:7,title:"QA Automation Intern",company:"QualityNest",initials:"QN",color:"#e7f7f4",ink:"#168a7a",type:"Internship",location:"Pune",salary:"₹18k/mo",cgpa:6.5,deadline:"2026-11-20",skills:["Testing","JavaScript","Playwright","Git"],description:"Help improve product quality by writing test cases, automating regression checks, and collaborating with software engineers.",posted:"6 days ago"},
+{id:8,title:"Cloud Support Associate",company:"Nimbus Systems",initials:"NS",color:"#ecebff",ink:"#6355bd",type:"Full-time",location:"Delhi",salary:"₹5–7 LPA",cgpa:6,deadline:"2026-12-05",skills:["Linux","Networking","Cloud","Troubleshooting"],description:"Support cloud customers, troubleshoot technical issues, and learn cloud operations with guidance from experienced engineers.",posted:"1 week ago"}
+];
+const defaultProfile={name:"Aarav Sharma",email:"aarav.sharma@example.com",course:"B.Tech · Computer Science",college:"North Valley Institute of Technology",year:"2027",cgpa:"8.1",location:"Any location",skills:"JavaScript, React, HTML, CSS, SQL",about:"Computer Science student interested in frontend development and building useful digital products."};
+const clone=x=>JSON.parse(JSON.stringify(x));
+function load(key,fallback){try{const v=localStorage.getItem(key);return v?JSON.parse(v):clone(fallback)}catch(e){return clone(fallback)}}
+let jobs=load("cc_jobs",seedJobs), profile=load("cc_profile",defaultProfile);
+let applications=load("cc_apps",[
+{id:"APP-1001",jobId:2,student:"Aarav Sharma",email:"aarav.sharma@example.com",cgpa:8.1,note:"Interested in software engineering and problem-solving.",date:"2026-10-12",status:"Shortlisted"},
+{id:"APP-1002",jobId:1,student:"Aarav Sharma",email:"aarav.sharma@example.com",cgpa:8.1,note:"I enjoy building responsive interfaces.",date:"2026-10-16",status:"Pending"}
+]);
+let activeJobId=null;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const save=()=>{try{localStorage.setItem("cc_jobs",JSON.stringify(jobs));localStorage.setItem("cc_profile",JSON.stringify(profile));localStorage.setItem("cc_apps",JSON.stringify(applications))}catch(e){showToast("Browser storage is unavailable. Changes may not persist.")}};
+function showToast(msg){$("toastMessage").textContent=msg;bootstrap.Toast.getOrCreateInstance($("appToast"),{delay:2800}).show()}
+function initials(name){return (name||"Student").trim().split(/\s+/).slice(0,2).map(x=>x[0]).join("").toUpperCase()}
+function jobById(id){return jobs.find(j=>j.id===Number(id))}
+function statusClass(s){return ({Applied:"status-applied",Pending:"status-pending",Shortlisted:"status-shortlisted",Rejected:"status-rejected"})[s]||"status-applied"}
+function statusBadge(s){return `<span class="status ${statusClass(s)}">${esc(s)}</span>`}
+function jobCard(j,compact=false){const applied=applications.some(a=>a.jobId===j.id&&a.email.toLowerCase()===profile.email.toLowerCase());return `<div class="${compact?'col-12':'col-md-6 col-xl-4'}"><article class="job-card"><div class="d-flex gap-3 align-items-start"><div class="company-logo" style="background:${esc(j.color||'#eef2ff')};color:${esc(j.ink||'#4568f5')}">${esc(j.initials||initials(j.company))}</div><div class="flex-grow-1 min-w-0"><h3 class="job-title">${esc(j.title)}</h3><div class="company-name">${esc(j.company)}</div></div><button class="btn btn-sm btn-light border" title="View details" onclick="viewJob(${j.id})"><i class="bi bi-arrow-up-right"></i></button></div><div class="mt-3"><span class="tag">${esc(j.type)}</span>${(j.skills||[]).slice(0,3).map(s=>`<span class="tag">${esc(s)}</span>`).join("")}</div><div class="job-meta"><span><i class="bi bi-geo-alt"></i>${esc(j.location)}</span><span><i class="bi bi-mortarboard"></i>${esc(j.cgpa)} CGPA+</span></div><div class="d-flex align-items-center justify-content-between mt-3 pt-3 border-top"><div><div class="salary">${esc(j.salary||"Not specified")}</div><div class="subtle mt-1" style="font-size:10px">Deadline ${esc(j.deadline||"Not specified")}</div></div><button class="btn ${applied?'btn-outline-success':'btn-primary'} btn-sm" ${applied?'disabled':''} onclick="startApply(${j.id})">${applied?'<i class="bi bi-check2 me-1"></i>Applied':'Apply now'}</button></div></article></div>`}
+function renderOverview(){const mine=applications.filter(a=>a.email.toLowerCase()===profile.email.toLowerCase());$("statJobs").textContent=jobs.length;$("statApplied").textContent=mine.length;$("statShortlist").textContent=mine.filter(a=>a.status==="Shortlisted").length;$("navJobCount").textContent=jobs.length;$("welcomeName").textContent=(profile.name||"Student").split(" ")[0];$("sideName").textContent=profile.name;$("sideAvatar").textContent=initials(profile.name);$("topAvatar").textContent=initials(profile.name);$("recommendedJobs").innerHTML=jobs.slice(0,2).map(j=>jobCard(j,true)).join("");const pct=profileCompletion();$("statProfile").textContent=pct+"%";$("profilePercent").textContent=pct+"%";$("profileProgress").style.width=pct+"%";const checks=[["Full name",!!profile.name],["Contact email",!!profile.email],["Academic details",!!profile.course&&!!profile.college],["Skills added",!!profile.skills]];$("profileChecklist").innerHTML=checks.map(([label,ok])=>`<div class="d-flex align-items-center gap-2 mb-2 small"><i class="bi ${ok?'bi-check-circle-fill text-success':'bi-circle text-secondary'}"></i><span class="${ok?'':'subtle'}">${label}</span></div>`).join("");$("recentActivity").innerHTML=mine.length?mine.slice().reverse().slice(0,3).map(a=>{const j=jobById(a.jobId);return `<div class="d-flex align-items-start gap-2 mb-3"><div class="stat-icon" style="width:34px;height:34px;font-size:15px;background:#eef2ff;color:#4568f5"><i class="bi bi-send"></i></div><div class="flex-grow-1"><div class="fw-bold" style="font-size:12px">${esc(j?.title||"Removed job")}</div><div class="subtle mt-1" style="font-size:10px">Applied ${esc(a.date)}</div></div>${statusBadge(a.status)}</div>`}).join(""):'<div class="subtle small">Your application activity will appear here.</div>'}
+function profileCompletion(){let n=0;["name","email","course","college","cgpa","skills","about"].forEach(k=>{if(String(profile[k]||"").trim())n++});return Math.round(n/7*100)}
+function renderJobs(){const q=($("jobSearch").value||$("globalSearch").value||"").toLowerCase().trim(),type=$("typeFilter").value,loc=$("locationFilter").value,cgpa=Number($("cgpaFilter").value||0);const found=jobs.filter(j=>{const text=[j.title,j.company,j.location,...(j.skills||[])].join(" ").toLowerCase();return (!q||text.includes(q))&&(!type||j.type===type)&&(!loc||j.location===loc)&&Number(j.cgpa||0)>=cgpa});$("allJobs").innerHTML=found.map(j=>jobCard(j)).join("")||'<div class="col-12"><div class="empty-state panel"><i class="bi bi-search"></i><strong>No matching jobs found</strong><p class="mb-0">Try changing your search or filters.</p></div></div>';$("jobsResultCount").textContent=`${found.length} opportunit${found.length===1?'y':'ies'}`}
+function renderApplications(){const mine=applications.filter(a=>a.email.toLowerCase()===profile.email.toLowerCase()),status=$("statusFilter").value,shown=mine.filter(a=>!status||a.status===status);$("applicationStats").innerHTML=[["Total applications",mine.length,"bi-send","#eef2ff","#4568f5"],["Shortlisted",mine.filter(a=>a.status==="Shortlisted").length,"bi-check2-circle","#e0f8ef","#14966b"],["Pending review",mine.filter(a=>["Pending","Applied"].includes(a.status)).length,"bi-hourglass-split","#fff2dc","#cb8a1c"]].map(x=>`<div class="col-md-4"><div class="stat-card"><div class="stat-icon" style="background:${x[3]};color:${x[4]}"><i class="bi ${x[2]}"></i></div><div><div class="stat-value">${x[1]}</div><div class="stat-label">${x[0]}</div></div></div></div>`).join("");$("applicationsTable").innerHTML=shown.map(a=>{const j=jobById(a.jobId);return `<tr><td><div class="fw-bold">${esc(j?.title||"Removed job")}</div><div class="subtle small">${esc(j?.company||"—")}</div></td><td>${esc(a.date)}</td><td>${esc(j?.type||"—")}</td><td>${statusBadge(a.status)}</td><td><button class="btn btn-sm btn-light border" onclick="viewJob(${a.jobId})" ${j?'':'disabled'} title="View job"><i class="bi bi-eye"></i></button></td></tr>`}).join("");$("emptyApplications").classList.toggle("d-none",shown.length>0);$("applicationsTable").parentElement.parentElement.classList.toggle("d-none",shown.length===0)}
+function renderProfile(){const fields={pName:"name",pEmail:"email",pCourse:"course",pCollege:"college",pYear:"year",pCgpa:"cgpa",pLocation:"location",pSkills:"skills",pAbout:"about"};Object.entries(fields).forEach(([id,key])=>$(id).value=profile[key]||"");$("profileCardName").textContent=profile.name||"Your name";$("profileCardCourse").textContent=profile.course||"Add your course";$("profileAvatar").textContent=initials(profile.name);const p=profileCompletion();$("profileCardPercent").textContent=p+"%";$("profileCardProgress").style.width=p+"%"}
+function renderAdmin(){ $("adminJobCount").textContent=jobs.length+" jobs";$("adminStats").innerHTML=[["Active listings",jobs.length,"bi-briefcase"],["Applications received",applications.length,"bi-file-earmark-check"],["Shortlisted",applications.filter(a=>a.status==="Shortlisted").length,"bi-person-check"]].map((x,i)=>`<div class="col-md-4"><div class="stat-card"><div class="stat-icon" style="background:${['#eef2ff','#e0f8ef','#fff2dc'][i]};color:${['#4568f5','#14966b','#cb8a1c'][i]}"><i class="bi ${x[2]}"></i></div><div><div class="stat-value">${x[1]}</div><div class="stat-label">${x[0]}</div></div></div></div>`).join("");$("adminJobsTable").innerHTML=jobs.map(j=>`<tr><td><div class="fw-bold">${esc(j.title)}</div><div class="subtle small">${esc(j.company)}</div></td><td>${esc(j.type)}</td><td>${esc(j.location)}</td><td><span class="salary">${esc(j.salary||"—")}</span></td><td><button class="btn btn-sm btn-outline-danger" onclick="deleteJob(${j.id})" title="Delete job"><i class="bi bi-trash"></i></button></td></tr>`).join("");$("adminApplicationsTable").innerHTML=applications.map(a=>`<tr><td><div class="fw-bold">${esc(a.student)}</div><div class="subtle small">${esc(a.email)}</div></td><td>${esc(jobById(a.jobId)?.title||"Removed job")}</td><td>${esc(a.date)}</td><td>${statusBadge(a.status)}</td><td><select class="form-select form-select-sm" style="min-width:125px" onchange="updateStatus('${esc(a.id)}',this.value)">${["Applied","Pending","Shortlisted","Rejected"].map(s=>`<option ${a.status===s?'selected':''}>${s}</option>`).join("")}</select></td></tr>`).join("");$("adminEmptyApps").classList.toggle("d-none",applications.length>0)}
+function goTo(section){document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));$("section-"+section).classList.add("active");document.querySelectorAll(".side-link").forEach(a=>a.classList.toggle("active",a.dataset.section===section));if(section==="jobs")renderJobs();if(section==="applications")renderApplications();if(section==="profile")renderProfile();if(section==="admin")renderAdmin();if(section==="overview")renderOverview();$("sidebar").classList.remove("open");window.scrollTo({top:0,behavior:"smooth"})}
+document.addEventListener("click",e=>{const nav=e.target.closest("[data-section]");if(nav){e.preventDefault();goTo(nav.dataset.section)}const g=e.target.closest("[data-goto]");if(g){e.preventDefault();goTo(g.dataset.goto)}});
+function viewJob(id){const j=jobById(id);if(!j){showToast("This listing is no longer available.");return}activeJobId=j.id;$("modalJobTitle").textContent=j.title;const applied=applications.some(a=>a.jobId===j.id&&a.email.toLowerCase()===profile.email.toLowerCase());$("jobModalBody").innerHTML=`<div class="d-flex gap-3 align-items-center mb-3"><div class="company-logo" style="background:${esc(j.color||'#eef2ff')};color:${esc(j.ink||'#4568f5')}">${esc(j.initials||initials(j.company))}</div><div><div class="fw-bold">${esc(j.company)}</div><div class="subtle small">${esc(j.location)} · ${esc(j.type)}</div></div></div><div class="row g-2 mb-3"><div class="col-6"><div class="p-3 rounded-3" style="background:#f6f8fc"><div class="subtle small">Package / stipend</div><strong class="salary">${esc(j.salary||"Not specified")}</strong></div></div><div class="col-6"><div class="p-3 rounded-3" style="background:#f6f8fc"><div class="subtle small">Minimum CGPA</div><strong>${esc(j.cgpa)} / 10</strong></div></div></div><h6 class="fw-bold mt-3">About the role</h6><p class="subtle" style="line-height:1.7">${esc(j.description||"No description provided.")}</p><h6 class="fw-bold">Skills</h6><div class="mb-3">${(j.skills||[]).map(s=>`<span class="tag">${esc(s)}</span>`).join("")}</div><div class="small subtle"><i class="bi bi-calendar3 me-2"></i>Application deadline: ${esc(j.deadline||"Not specified")}</div><div class="alert ${Number(profile.cgpa||0)>=Number(j.cgpa||0)?'alert-success':'alert-warning'} py-2 mt-3 mb-0 small">${Number(profile.cgpa||0)>=Number(j.cgpa||0)?'<i class="bi bi-check-circle me-1"></i>Your saved CGPA meets this role’s minimum requirement.':'<i class="bi bi-exclamation-triangle me-1"></i>Your saved CGPA may not meet this role’s minimum requirement. You can still submit a demo application.'}</div>`;$("modalApplyBtn").disabled=applied;$("modalApplyBtn").innerHTML=applied?'<i class="bi bi-check2 me-1"></i>Already applied':'Apply now';bootstrap.Modal.getOrCreateInstance($("jobModal")).show()}
+function startApply(id){activeJobId=Number(id);const j=jobById(id);if(!j)return;bootstrap.Modal.getOrCreateInstance($("jobModal")).hide();$("applyJobId").value=j.id;$("applyName").value=profile.name||"";$("applyEmail").value=profile.email||"";$("applyCgpa").value=profile.cgpa||"";$("applyNote").value="";bootstrap.Modal.getOrCreateInstance($("applyModal")).show()}
+$("modalApplyBtn").addEventListener("click",()=>startApply(activeJobId));
+$("applyForm").addEventListener("submit",e=>{e.preventDefault();const id=Number($("applyJobId").value),j=jobById(id),name=$("applyName").value.trim(),email=$("applyEmail").value.trim(),cgpa=Number($("applyCgpa").value);if(!j||!name||!email||cgpa<0||cgpa>10){showToast("Please check the application details.");return}if(applications.some(a=>a.jobId===id&&a.email.toLowerCase()===email.toLowerCase())){showToast("This email has already applied for this job.");return}applications.push({id:"APP-"+Date.now().toString().slice(-6),jobId:id,student:name,email,cgpa,note:$("applyNote").value.trim(),date:new Date().toISOString().slice(0,10),status:"Pending"});if(email.toLowerCase()===profile.email.toLowerCase()){profile.name=name;profile.email=email;profile.cgpa=String(cgpa)}save();bootstrap.Modal.getOrCreateInstance($("applyModal")).hide();renderAll();showToast("Application submitted successfully! (Demo)");goTo("applications")});
+$("profileForm").addEventListener("submit",e=>{e.preventDefault();profile={name:$("pName").value.trim(),email:$("pEmail").value.trim(),course:$("pCourse").value.trim(),college:$("pCollege").value.trim(),year:$("pYear").value,cgpa:$("pCgpa").value,location:$("pLocation").value,skills:$("pSkills").value.trim(),about:$("pAbout").value.trim()};save();renderAll();renderProfile();showToast("Profile saved in this browser.")});
+["jobSearch","typeFilter","locationFilter","cgpaFilter"].forEach(id=>$(id).addEventListener("input",renderJobs));
+$("globalSearch").addEventListener("input",()=>{if(!$("section-jobs").classList.contains("active"))goTo("jobs");$("jobSearch").value=$("globalSearch").value;renderJobs()});
+$("resetFilters").addEventListener("click",()=>{$("jobSearch").value="";$("globalSearch").value="";$("typeFilter").value="";$("locationFilter").value="";$("cgpaFilter").value="0";renderJobs()});
+$("statusFilter").addEventListener("change",renderApplications);
+$("menuBtn").addEventListener("click",()=>$("sidebar").classList.toggle("open"));
+$("notificationBtn").addEventListener("click",()=>showToast("You're all caught up!"));
+$("accountBtn").addEventListener("click",()=>showToast("Demo account: authentication is not connected."));
+function updateStatus(id,status){const a=applications.find(x=>x.id===id);if(!a)return;a.status=status;save();renderAll();showToast("Application status updated.") }
+function deleteJob(id){if(!confirm("Delete this job listing? Related application history will remain."))return;jobs=jobs.filter(j=>j.id!==id);save();renderAll();showToast("Job listing deleted.") }
+$("addJobForm").addEventListener("submit",e=>{e.preventDefault();const title=$("newTitle").value.trim(),company=$("newCompany").value.trim();if(!title||!company)return;const palette=[["#e9edff","#4c61d8"],["#e1f7ef","#16815d"],["#fff0dc","#bb741c"],["#f2e7ff","#8c52c8"]],c=palette[jobs.length%palette.length];jobs.unshift({id:Date.now(),title,company,initials:initials(company),color:c[0],ink:c[1],type:$("newType").value,location:$("newLocation").value.trim()||"Remote",salary:$("newSalary").value.trim()||"Not specified",cgpa:Number($("newCgpa").value||0),deadline:$("newDeadline").value||"Not specified",skills:$("newSkills").value.split(",").map(s=>s.trim()).filter(Boolean),description:$("newDescription").value.trim()||"No description provided.",posted:"Just now"});save();e.target.reset();bootstrap.Modal.getOrCreateInstance($("addJobModal")).hide();renderAll();showToast("New job listing created.");goTo("admin")});
+function renderAll(){renderOverview();renderJobs();renderApplications();renderAdmin();renderProfile()}
+renderAll();
+</script>
+
+<script>
+/* CampusConnect API bridge.
+   Backend sync is enabled when the page is served by the Express server.
+   LocalStorage remains a fallback for offline/demo use. */
+(() => {
+  const API_BASE = window.CAMPUSCONNECT_API || "/api";
+  const tokenKey = "cc_token";
+  const getToken = () => localStorage.getItem(tokenKey);
+  async function api(path, options={}) {
+    const headers = {"Content-Type":"application/json", ...(options.headers||{})};
+    if (getToken()) headers.Authorization = "Bearer " + getToken();
+    const res = await fetch(API_BASE + path, {...options, headers});
+    const data = await res.json().catch(()=>({message:"Unexpected server response"}));
+    if (!res.ok) throw new Error(data.message || "API request failed");
+    return data;
+  }
+  window.CampusConnectAPI = {
+    register: payload => api("/auth/register",{method:"POST",body:JSON.stringify(payload)}),
+    login: async payload => {
+      const result = await api("/auth/login",{method:"POST",body:JSON.stringify(payload)});
+      localStorage.setItem(tokenKey,result.token);
+      if(result.user) localStorage.setItem("cc_auth_user",JSON.stringify(result.user));
+      return result;
+    },
+    logout: () => {localStorage.removeItem(tokenKey);localStorage.removeItem("cc_auth_user");},
+    me: () => api("/auth/me"),
+    jobs: () => api("/jobs"),
+    createJob: payload => api("/jobs",{method:"POST",body:JSON.stringify(payload)}),
+    deleteJob: id => api("/jobs/"+id,{method:"DELETE"}),
+    profile: () => api("/students/me"),
+    updateProfile: payload => api("/students/me",{method:"PUT",body:JSON.stringify(payload)}),
+    applications: () => api("/applications/mine"),
+    apply: payload => api("/applications",{method:"POST",body:JSON.stringify(payload)}),
+    allApplications: () => api("/applications",{method:"GET"}),
+    updateApplication: (id,status) => api("/applications/"+id+"/status",{method:"PATCH",body:JSON.stringify({status})})
+  };
+  // Provide a clear connection indicator in the browser console and a non-blocking toast.
+  document.addEventListener("DOMContentLoaded", async () => {
+    try {
+      const result = await window.CampusConnectAPI.jobs();
+      if (Array.isArray(result.jobs) && result.jobs.length) {
+        // The existing app uses numeric ids. Keep backend IDs in a separate map for API calls.
+        window.CampusConnectAPI.backendJobMap = {};
+        const mapped = result.jobs.map((j,i) => {
+          const id = Number(j.demoId || (i+1000));
+          window.CampusConnectAPI.backendJobMap[id] = j._id;
+          return {...j, id, initials:j.initials || String(j.company||"CC").split(/\s+/).map(x=>x[0]).slice(0,2).join("").toUpperCase(),
+            color:j.color||"#e9edff",ink:j.ink||"#4568f5",skills:j.skills||[],salary:j.salary||"Not specified",
+            cgpa:Number(j.minCgpa ?? j.cgpa ?? 0),deadline:j.deadline ? String(j.deadline).slice(0,10) : "Not specified",
+            description:j.description||"",type:j.type||"Full-time",location:j.location||"Remote"});
+        });
+        // Existing renderers read the global jobs binding; replace it and refresh UI.
+        jobs = mapped;
+        save();
+        renderAll();
+        console.info("CampusConnect connected to backend; loaded", jobs.length, "jobs.");
+      }
+    } catch (err) {
+      console.info("CampusConnect backend unavailable; using local demo data.", err.message);
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
